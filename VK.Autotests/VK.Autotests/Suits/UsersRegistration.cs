@@ -23,7 +23,7 @@ namespace VK.Autotests.Suits
         {
             var response = new Requests.UserRegistration().Sign_Up_Failed();
             var parsedContent = JObject.Parse(response.Content);
-            Assert.AreEqual("100", parsedContent["error_code"]);
+            Assert.AreEqual("100", parsedContent["error"]["error_code"]);
         }
     }
 }
